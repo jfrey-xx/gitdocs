@@ -56,11 +56,14 @@ Gem::Specification.new do |s|
   # NOTE: activerecord is not being updated to v5.x because this version drops
   # support for Ruby2.0. Ruby2.0 is EOLed but is still the default ruby version
   # installed on OSX.
-  s.add_dependency 'activerecord',    '~> 4.2.0'
+  # HACK: bump activerecord to 5 for ruby 2.7 on Ubuntu 20.04 and bigdecimal 2.0.0
+  # (version 7 does not seem supported by gitdocs as-is)
+  s.add_dependency 'activerecord',    '~> 5.0.0'
   s.add_dependency 'grit',            '~> 2.5.0'
   s.add_dependency 'mimetype-fu',     '~> 0.1.2'
   s.add_dependency 'launchy',         '~> 2.4.2'
-  s.add_dependency 'rugged',          '~> 0.24.0'
+  # last working version of rugged, that still compiles with ruby 2.7/Ubuntu 20.04
+  s.add_dependency 'rugged',          '~> 0.28.0'
   s.add_dependency 'table_print',     '~> 1.5.1'
   s.add_dependency 'notiffany',       '~> 0.1.0'
 

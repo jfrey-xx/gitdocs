@@ -1,3 +1,6 @@
+
+Note: fork with tuned dependencies to make gitdocs work on Ubuntu 20.04 (ruby 2.7) -- ableit with some warnings during execution.
+
 # Gitdocs
 
 [![Gem Version](https://badge.fury.io/rb/gitdocs.svg)](http://badge.fury.io/rb/gitdocs)
